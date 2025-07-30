@@ -1,0 +1,62 @@
+{
+  "name": "shopify-nextjs-prisma-app",
+  "version": "2025.07.29",
+  "type": "module",
+  "author": {
+    "name": "Harshdeep Singh Hura",
+    "url": "https://harshdeephura.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kinngh/shopify-nextjs-prisma-app.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "pretty": "prettier --write ./",
+    "update": "ncu -u",
+    "-----> Tunnel <-----": "",
+    "ngrok:auth": "ngrok authtoken <auth-token-goes-here>",
+    "ngrok": "ngrok http 3000",
+    "cloudflare": "cloudflared tunnel --url localhost:3000",
+    "-----> Shopify <-----": "",
+    "g:install": "npm i -g @shopify/cli@latest",
+    "shopify": "shopify",
+    "update:config": "node _developer/tomlWriter.js; npm run pretty; shopify app deploy;",
+    "update:url": "node _developer/updateDashboard.js",
+    "-----> Database <-----": "",
+    "pg:create": "mkdir database; pg_ctl -D database init",
+    "pg:start": "pg_ctl -D database start",
+    "pg:stop": "pg_ctl -D database stop",
+    "db:create": "mkdir database; mysqld --initialize-insecure --datadir=./database",
+    "db:start": "mysqld --datadir=./database",
+    "db:stop": "mysqladmin shutdown",
+    "-----> Prisma <-----": "",
+    "prisma": "npx prisma",
+    "prisma:push": "npx prisma db push",
+    "prisma:pull": "npx prisma db pull",
+    "-----> Reserved Scripts <-----": "",
+    "prepare": "npx prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.12.0",
+    "@shopify/polaris": "^13.9.5",
+    "@shopify/shopify-api": "^11.14.1",
+    "cryptr": "^6.3.0",
+    "next": "15.4.2",
+    "next-api-middleware": "^3.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@iarna/toml": "^2.2.5",
+    "@shopify/app-bridge-ui-types": "^0.2.1",
+    "@shopify/cli-kit": "^3.82.1",
+    "dotenv": "^17.2.0",
+    "ngrok": "^5.0.0-beta.2",
+    "npm-check-updates": "^18.0.1",
+    "prettier": "^3.6.2",
+    "prisma": "^6.12.0"
+  }
+}
