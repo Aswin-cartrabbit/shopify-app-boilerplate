@@ -1,4 +1,4 @@
-import withMiddleware from "@/utils/middleware/withMiddleware.js";
+import withMiddleware from "@/utils/middleware/withMiddleware";
 
 /**
  * @param {import("next").NextApiRequest} req - The HTTP request object.
@@ -11,11 +11,11 @@ const handler = async (req, res) => {
   try {
     const { body } = req;
     const shop = req.body.shop_domain;
-    console.log("gdpr/shop_redact", body, shop);
+    console.log("gdpr/customers_redact", body, shop);
     return res.status(200).send({ message: "ok" });
   } catch (e) {
     console.error(
-      `---> An error occured at /api/gdpr/shop_redact: ${e.message}`,
+      `---> An error occured at /api/gdpr/customers_redact: ${e.message}`,
       e
     );
     return res.status(500).send({ error: true });

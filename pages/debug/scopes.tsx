@@ -1,5 +1,6 @@
 import { Card, DataTable, Layout, Page, Text } from "@shopify/polaris";
 import { useRouter } from "next/router";
+import React from "react";
 import { useEffect, useState } from "react";
 
 const OptionalScopes = () => {
@@ -12,9 +13,24 @@ const OptionalScopes = () => {
     if (!scopes) return;
 
     const rows = [
-      [<Text fontWeight="bold">Granted</Text>, scopes.granted.join(", ")],
-      [<Text fontWeight="bold">Required</Text>, scopes.required.join(", ")],
-      [<Text fontWeight="bold">Optional</Text>, scopes.optional.join(", ")],
+      [
+        <Text fontWeight="bold" as={"dd"}>
+          Granted
+        </Text>,
+        scopes.granted.join(", "),
+      ],
+      [
+        <Text fontWeight="bold" as={"dd"}>
+          Required
+        </Text>,
+        scopes.required.join(", "),
+      ],
+      [
+        <Text fontWeight="bold" as={"dd"}>
+          Optional
+        </Text>,
+        scopes.optional.join(", "),
+      ],
     ];
 
     setRows(rows);
@@ -67,8 +83,12 @@ const OptionalScopes = () => {
                 rows={rows}
                 columnContentTypes={["text", "text"]}
                 headings={[
-                  <Text fontWeight="bold">Type</Text>,
-                  <Text fontWeight="bold">Scopes</Text>,
+                  <Text fontWeight="bold" as={"dd"}>
+                    Type
+                  </Text>,
+                  <Text fontWeight="bold" as={"dd"}>
+                    Scopes
+                  </Text>,
                 ]}
               />
             </Card>

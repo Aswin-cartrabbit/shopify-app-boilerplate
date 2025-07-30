@@ -1,6 +1,7 @@
+// @ts-nocheck
 import { LogSeverity, shopifyApi } from "@shopify/shopify-api";
 import "@shopify/shopify-api/adapters/node";
-import appUninstallHandler from "./webhooks/app_uninstalled.js";
+import appUninstallHandler from "./webhooks/app_uninstalled";
 
 const isDev = process.env.NODE_ENV === "development";
 

@@ -9,6 +9,7 @@ import {
   Text,
 } from "@shopify/polaris";
 import { useRouter } from "next/router";
+import React from "react";
 import { useEffect, useState } from "react";
 
 const BillingAPI = () => {
@@ -40,7 +41,7 @@ const BillingAPI = () => {
         <Layout.Section>
           <Card>
             <BlockStack gap="200">
-              <Text>
+              <Text as={"dd"}>
                 Subscribe your merchant to a test $10.25 plan and redirect to
                 your home page.
               </Text>
@@ -85,7 +86,7 @@ const ActiveSubscriptions = () => {
       rowsData.push(["No Plan", "N/A", "N/A", "USD 0.00"]);
     } else {
       console.log("Rendering Data");
-      Object.entries(activeSubscriptions).map(([key, value]) => {
+      Object.entries(activeSubscriptions).map(([key, value]: [string, any]) => {
         const { name, status, test } = value;
         const { amount, currencyCode } =
           value.lineItems[0].plan.pricingDetails.price;
@@ -101,7 +102,9 @@ const ActiveSubscriptions = () => {
   return (
     <Card>
       <BlockStack gap="200">
-        <Text fontWeight="bold">Active Subscriptions</Text>
+        <Text fontWeight="bold" as={"dd"}>
+          Active Subscriptions
+        </Text>
         <DataTable
           columnContentTypes={["text", "text", "text", "text"]}
           headings={["Plan Name", "Status", "Test", "Amount"]}

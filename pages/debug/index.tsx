@@ -8,6 +8,7 @@ import {
   BlockStack,
 } from "@shopify/polaris";
 import { useRouter } from "next/router";
+import React from "react";
 
 const DebugIndex = () => {
   const router = useRouter();
@@ -26,7 +27,7 @@ const DebugIndex = () => {
                 <Text as="h2" variant="headingMd">
                   Scopes
                 </Text>
-                <Text>
+                <Text as={"dd"}>
                   Explore what scopes are registered and how to ask for optional
                   scopes
                 </Text>
@@ -49,7 +50,7 @@ const DebugIndex = () => {
                 <Text as="h2" variant="headingMd">
                   Data Fetching
                 </Text>
-                <Text>
+                <Text as={"dd"}>
                   Send GET, POST and GraphQL queries to your app's backend.
                 </Text>
                 <InlineStack wrap={false} align="end">
@@ -71,7 +72,7 @@ const DebugIndex = () => {
                 <Text as="h2" variant="headingMd">
                   Billing API
                 </Text>
-                <Text>
+                <Text as={"dd"}>
                   Subscribe merchant to a plan and explore existing plans.
                 </Text>
                 <InlineStack wrap={false} align="end">
@@ -93,7 +94,9 @@ const DebugIndex = () => {
                 <Text as="h2" variant="headingMd">
                   Resource Picker
                 </Text>
-                <Text>See how to use AppBridge CDN's Resource Picker</Text>
+                <Text as={"dd"}>
+                  See how to use AppBridge CDN's Resource Picker
+                </Text>
                 <InlineStack wrap={false} align="end">
                   <Button
                     variant="primary"

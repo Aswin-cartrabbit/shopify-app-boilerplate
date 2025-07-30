@@ -8,7 +8,14 @@ import {
   TextField,
 } from "@shopify/polaris";
 import { useRouter } from "next/router";
+import React from "react";
 import { useState } from "react";
+
+declare global {
+  interface Window {
+    shopify: any;
+  }
+}
 
 const ResourcePicker = () => {
   const router = useRouter();
@@ -57,10 +64,12 @@ const ResourcePicker = () => {
           <Layout.Section variant="fullWidth">
             <Card>
               <BlockStack gap="200">
-                <Text variant="headingMd">
+                <Text variant="headingMd" as={"dd"}>
                   Start typing to search for a product
                 </Text>
                 <TextField
+                  label="Search Products"
+                  autoComplete="off"
                   value={initialQuery}
                   onChange={(value) => {
                     setInitialQuery(value);
@@ -85,7 +94,9 @@ const ResourcePicker = () => {
           <Layout.Section>
             <Card>
               <BlockStack gap="200">
-                <Text fontWeight="bold">Selection JSON</Text>
+                <Text fontWeight="bold" as={"dd"}>
+                  Selection JSON
+                </Text>
                 <pre>{resourcePickerSelection}</pre>
               </BlockStack>
             </Card>

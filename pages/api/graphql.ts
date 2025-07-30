@@ -1,6 +1,6 @@
-import withMiddleware from "@/utils/middleware/withMiddleware.js";
-import shopify from "@/utils/shopify.js";
-import sessionHandler from "@/utils/sessionHandler.js";
+import withMiddleware from "@/utils/middleware/withMiddleware";
+import shopify from "@/utils/shopify";
+import sessionHandler from "@/utils/sessionHandler";
 
 /**
  * @param {import("next").NextApiRequest} req - The HTTP request object.

@@ -1,5 +1,5 @@
-import shopify from "@/utils/shopify.js";
-import validateJWT from "../validateJWT.js";
+import shopify from "@/utils/shopify";
+import validateJWT from "../validateJWT";
 
 /**
  *

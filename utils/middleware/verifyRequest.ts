@@ -1,7 +1,7 @@
-import sessionHandler from "@/utils/sessionHandler.js";
-import shopify from "@/utils/shopify.js";
+import sessionHandler from "@/utils/sessionHandler";
+import shopify from "@/utils/shopify";
 import { RequestedTokenType, Session } from "@shopify/shopify-api";
-import validateJWT from "../validateJWT.js";
+import validateJWT from "../validateJWT";
 
 /**
  *

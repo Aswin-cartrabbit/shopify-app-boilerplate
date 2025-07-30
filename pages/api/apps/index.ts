@@ -1,4 +1,4 @@
-import withMiddleware from "@/utils/middleware/withMiddleware.js";
+import withMiddleware from "@/utils/middleware/withMiddleware";
 
 /**
  * @param {import("next").NextApiRequest} req - The HTTP request object.

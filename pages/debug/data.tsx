@@ -8,9 +8,10 @@ import {
   Button,
 } from "@shopify/polaris";
 import { useRouter } from "next/router";
+import React from "react";
 import { useEffect, useState } from "react";
 
-const useDataFetcher = (initialState, url, options) => {
+const useDataFetcher = (initialState, url, options?: any) => {
   const [data, setData] = useState(initialState);
 
   const fetchData = async () => {
@@ -26,7 +27,7 @@ const DataCard = ({ method, url, data, onRefetch }) => (
   <Layout.Section>
     <Card>
       <BlockStack gap="200">
-        <Text>
+        <Text as={"dd"}>
           {method} <code>{url}</code>: {data}
         </Text>
         <InlineStack align="end">

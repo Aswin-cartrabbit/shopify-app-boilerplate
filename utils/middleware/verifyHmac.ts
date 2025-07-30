@@ -1,6 +1,6 @@
 import crypto from "crypto";
-import { NextResponse } from "next/server.js";
-import shopify from "@/utils/shopify.js";
+import { NextResponse } from "next/server";
+import shopify from "@/utils/shopify";
 
 /**
  * @param {import('next').NextApiRequest} req - The incoming request object.

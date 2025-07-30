@@ -10,6 +10,7 @@ import {
 } from "@shopify/polaris";
 import { ExternalIcon } from "@shopify/polaris-icons";
 import { useRouter } from "next/router";
+import React from "react";
 
 export async function getServerSideProps(context) {
   //DO NOT REMOVE THIS.
@@ -31,10 +32,10 @@ const HomePage = () => {
                   <Text as="h2" variant="headingMd">
                     Debug Cards
                   </Text>
-                  <Text>
-                    Explore how the repository handles data fetching from the
+                  <Text as="h5">
+                    {`Explore how the repository handles data fetching from the
                     backend, App Proxy, making GraphQL requests, Billing API and
-                    more.
+                    more.`}
                   </Text>
                   <InlineStack wrap={false} align="end">
                     <Button
@@ -56,7 +57,9 @@ const HomePage = () => {
                 <Text as="h2" variant="headingMd">
                   App Bridge CDN
                 </Text>
-                <Text>AppBridge has moved from an npm package to CDN</Text>
+                <Text as={"dd"}>
+                  AppBridge has moved from an npm package to CDN
+                </Text>
                 <InlineStack wrap={false} align="end">
                   <Button
                     variant="primary"
@@ -81,7 +84,7 @@ const HomePage = () => {
                 <Text as="h2" variant="headingMd">
                   Repository
                 </Text>
-                <Text>
+                <Text as={"dd"}>
                   Found a bug? Open an issue on the repository, or star on
                   GitHub
                 </Text>
@@ -121,7 +124,7 @@ const HomePage = () => {
                 <Text as="h2" variant="headingMd">
                   Course
                 </Text>
-                <Text>
+                <Text as={"dd"}>
                   [BETA] I'm building course as a live service on How To Build
                   Shopify Apps
                 </Text>

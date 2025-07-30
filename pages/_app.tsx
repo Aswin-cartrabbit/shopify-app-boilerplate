@@ -1,8 +1,10 @@
+// @ts-nocheck
 import AppBridgeProvider from "@/components/providers/AppBridgeProvider";
 import { AppProvider as PolarisProvider } from "@shopify/polaris";
 import "@shopify/polaris/build/esm/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
 import Link from "next/link";
+import React from "react";
 
 const App = ({ Component, pageProps }) => {
   return (

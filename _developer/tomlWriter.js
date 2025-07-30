@@ -61,7 +61,7 @@ try {
 
   // Webhooks
   webhookWriter(config);
-
+  ``;
   // GDPR URLs
   config.webhooks.privacy_compliance = {};
   config.webhooks.privacy_compliance.customer_data_request_url = `${appUrl}/api/gdpr/customers_data_request`;

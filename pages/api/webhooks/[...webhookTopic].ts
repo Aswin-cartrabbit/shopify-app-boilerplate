@@ -7,8 +7,8 @@
  * To update this file, run `npm run update:config` or `bun run update:config`
  */
 
-import shopify from "@/utils/shopify.js";
-import appUninstallHandler from "@/utils/webhooks/app_uninstalled.js";
+import shopify from "@/utils/shopify";
+import appUninstallHandler from "@/utils/webhooks/app_uninstalled";
 
 async function buffer(readable) {
   const chunks = [];

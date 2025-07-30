@@ -1,5 +1,5 @@
-import sessionHandler from "./sessionHandler.js";
-import shopify from "./shopify.js";
+import sessionHandler from "./sessionHandler";
+import shopify from "./shopify";
 
 /**
  * Fetches the offline session associated with a shop.

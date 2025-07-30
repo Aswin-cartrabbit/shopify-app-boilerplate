@@ -57,6 +57,7 @@
     "ngrok": "^5.0.0-beta.2",
     "npm-check-updates": "^18.0.1",
     "prettier": "^3.6.2",
-    "prisma": "^6.12.0"
+    "prisma": "^6.12.0",
+    "typescript": "5.8.3"
   }
 }
