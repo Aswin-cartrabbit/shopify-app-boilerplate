@@ -5,6 +5,8 @@ import "@shopify/polaris/build/esm/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
 import Link from "next/link";
 import React from "react";
+import AppLayout from "@/components/layout/AppLayout";
+import type { AppProps } from "next/app";
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -14,7 +16,9 @@ const App = ({ Component, pageProps }) => {
           <ui-nav-menu>
             <Link href="/debug">Debug Cards</Link>
           </ui-nav-menu>
-          <Component {...pageProps} />
+          <AppLayout>
+            <Component {...pageProps} />
+          </AppLayout>
         </AppBridgeProvider>
       </PolarisProvider>
     </>

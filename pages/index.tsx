@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import isInitialLoad from "@/utils/middleware/isInitialLoad";
 import {
   BlockStack,
@@ -10,7 +11,6 @@ import {
 } from "@shopify/polaris";
 import { ExternalIcon } from "@shopify/polaris-icons";
 import { useRouter } from "next/router";
-import React from "react";
 
 export async function getServerSideProps(context) {
   //DO NOT REMOVE THIS.
@@ -23,6 +23,7 @@ const HomePage = () => {
 
   return (
     <>
+      <NavBar />
       <Page title="Home">
         <Layout>
           {isDev ? (
